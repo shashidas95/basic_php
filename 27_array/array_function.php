@@ -86,8 +86,8 @@ uksort — Sort an array by keys using a user-defined comparison function
 usort — Sort an array by values using a user-defined comparison function
 ＋add a note
  */
-require('helpers.php');
-/* array_chunk — Split an array into chunks
+// require('helpers.php');
+/* 😃 array_chunk — Split an array into chunks
  array_chunk(array $array, int $length, bool $preserve_keys = false): array
 */
 
@@ -95,14 +95,14 @@ require('helpers.php');
 // prettyPrintArray(array_chunk($items,2));// keys are not preserved
 // prettyPrintArray(array_chunk($items,2, true));// keys are preserved
 
-/* array_combine()-Creates an array by using one array for keys and another for its values
+/*😃 array_combine()-Creates an array by using one array for keys and another for its values
 */
 
 // $array1 =['a','b','c', 'd', 'e'];
 // $array2 =[1, 2, 3, 4, 5];
 // prettyPrintArray(array_combine($array1, $array2));
 
-/* array_filter — Filters elements of an array using a callback function
+/* 😃 array_filter — Filters elements of an array using a callback function
  */
 
 // $array =[1, 2, 3, 4, 5,6,7,8,9,10];
@@ -141,7 +141,7 @@ parameter
 
 
 
-/* array_keys array_keys — Return all the keys or a subset of the keys of an array 
+/* 😃 array_keys array_keys — Return all the keys or a subset of the keys of an array 
 array_keys(array $array): array
 array_keys(array $array, mixed $filter_value, bool $strict = false): array
 
@@ -154,7 +154,7 @@ array_keys(array $array, mixed $filter_value, bool $strict = false): array
 //If a filter_value is specified, then only the keys for that value are returned. Otherwise, all the keys from the array are returned.
 
 
-/* array_map — Applies the callback to the elements of the given arrays */
+/* 😃 array_map — Applies the callback to the elements of the given arrays */
 /*array_map(?callable $callback, array $array, array ...$arrays): array  */
 
 /* √ array_map() returns an array containing the results of applying the callback to the corresponding value of array (and arrays if more arrays are provided) used as arguments for the callback. The number of parameters that the callback function accepts should match the number of arrays passed to array_map(). Excess input arrays are ignored. An ArgumentCountError is thrown if an insufficient number of arguments is provided.
@@ -180,7 +180,7 @@ array_keys(array $array, mixed $filter_value, bool $strict = false): array
 //  prettyPrintArray($array);
 
 
-/* ◊ array_reduce — Iteratively reduce the array to a single value using a callback function*/
+/* ◊ 😃 array_reduce — Iteratively reduce the array to a single value using a callback function*/
 
 /* array_reduce(array $array, callable $callback, mixed $initial = null): mixed
 Parameters ¶
@@ -199,7 +199,7 @@ Holds the value of the current iteration.
 initial
 If the optional initial is available, it will be used at the beginning of the process, or as a final result in case the array is empty.
 
-array_reduce() applies iteratively the callback function to the elements of the array, so as to reduce the array to a single value.
+😃 array_reduce() applies iteratively the callback function to the elements of the array, so as to reduce the array to a single value.
 
  */
 // $itemInvoices =[
@@ -218,9 +218,9 @@ array_reduce() applies iteratively the callback function to the elements of the 
   $item holds the current return value of current iteration */
 
   /* array_search() array_search — Searches the array for a given value and returns the first corresponding key if successful
-😀 😀 😀 
-array_search(mixed $needle, array $haystack, bool $strict = false): int|string|false
-😀 e
+
+😃 array_search(mixed $needle, array $haystack, bool $strict = false): int|string|false
+
 ✓needle
 The searched value.
 
@@ -263,36 +263,37 @@ To return the keys for all matching values, use array_keys() with the optional s
 
 
 */
-echo "asort — Sort an array by value in ascending order";
-echo "\n";
-$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
-asort($fruits);
-foreach ($fruits as $key => $val) {
-    echo "$key = $val\n";
-}
-echo "ksort — Sort an array by key in ascending order";
-echo "\n";
+// echo "asort — Sort an array by value in ascending order";
+// echo "\n";
+// $fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+// asort($fruits);
+// foreach ($fruits as $key => $val) {
+//     echo "$key = $val\n";
+// }
+// echo "ksort — Sort an array by key in ascending order";
+// echo "\n";
 
 /* ksort — Sort an array by key in ascending order */
-$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
-ksort($fruits);
-foreach ($fruits as $key => $val) {
-  echo "$key = $val\n";
-}
+// $fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+// ksort($fruits);
+// foreach ($fruits as $key => $val) {
+//   echo "$key = $val\n";
+// }
 
-echo 'arsort — Sort an array in descending order and maintain index association';
-echo "\n";
-$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
-arsort($fruits);
-foreach ($fruits as $key => $val) {
-  echo "$key = $val\n";
-}
-echo 'krsort — Sort an array by key in descending order';
-echo "\n";
-$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
-krsort($fruits);
-foreach ($fruits as $key => $val) {
-  echo "$key = $val\n";
-}
+// echo 'arsort — Sort an array in descending order and maintain index association';
+// echo "\n";
+// $fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+// arsort($fruits);
+// foreach ($fruits as $key => $val) {
+//   echo "$key = $val\n";
+// }
+// echo 'krsort — Sort an array by key in descending order';
+// echo "\n";
+// $fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+// krsort($fruits);
+// foreach ($fruits as $key => $val) {
+//   echo "$key = $val\n";
+// }
+
 ?>
 
