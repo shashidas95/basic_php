@@ -235,17 +235,17 @@ If the third parameter strict is set to true then the array_search() function wi
 objects must be the same instance.
  */
 
-$array = array(0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red');
-$key = array_search('blue',$array);
-if ($key) {
-    echo "color {$key} is  found";
-} else {
-    echo "color {$key} is not found";
-}
-echo PHP_EOL;
-if (in_array("blue", $array, true)) { //stric comparison true;
-    echo "color is found";
-}
+// $array = array(0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red');
+// $key = array_search('blue',$array);
+// if ($key) {
+//     echo "color {$key} is  found";
+// } else {
+//     echo "color {$key} is not found";
+// }
+// echo PHP_EOL;
+// if (in_array("blue", $array, true)) { //stric comparison true;
+//     echo "color is found";
+// }
 /* 
 Returns the key for needle if it is found in the array, false otherwise.
 
@@ -258,5 +258,41 @@ To return the keys for all matching values, use array_keys() with the optional s
 // $key = array_search('green', $array); // $key = 2;
 // //$key = array_search('red', $array);   // $key = 1;
 // echo $key;
+
+/* ⎷⎷⎷⎷⎷⎷🥸 sort()sort — Sort an array in ascending order
+
+
+*/
+echo "asort — Sort an array by value in ascending order";
+echo "\n";
+$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+asort($fruits);
+foreach ($fruits as $key => $val) {
+    echo "$key = $val\n";
+}
+echo "ksort — Sort an array by key in ascending order";
+echo "\n";
+
+/* ksort — Sort an array by key in ascending order */
+$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+ksort($fruits);
+foreach ($fruits as $key => $val) {
+  echo "$key = $val\n";
+}
+
+echo 'arsort — Sort an array in descending order and maintain index association';
+echo "\n";
+$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+arsort($fruits);
+foreach ($fruits as $key => $val) {
+  echo "$key = $val\n";
+}
+echo 'krsort — Sort an array by key in descending order';
+echo "\n";
+$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+krsort($fruits);
+foreach ($fruits as $key => $val) {
+  echo "$key = $val\n";
+}
 ?>
 
