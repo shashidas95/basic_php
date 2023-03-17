@@ -123,4 +123,64 @@ which shows that the original array has been sorted in ascending order of string
 // usort($fruits,"compare_lengths" );
 // prettyPrintArray($fruits);
 
+// $array = ['d'=>1, 'c'=>4, 'b'=>3, 'a'=>2];
+
+// usort($array, fn($a,$b)=>$a<=>$b); //<=> spaceship operator
+
+// print_r($array);
+
+
+
+/* The spaceship operator (<=>) is a comparison operator introduced in PHP 7 that simplifies the task of comparing two values. 
+The operator returns one of three values:
+
+-1 if the left operand is less than the right operand.
+0 if the left and right operands are equal.
+1 if the left operand is greater than the right operand.
+Here is an example of how to use the spaceship operator:
+
+$a = 10;
+$b = 20;
+echo $a <=> $b; // prints -1
+
+$a = 20;
+$b = 20;
+echo $a <=> $b; // prints 0
+
+$a = 30;
+$b = 20;
+echo $a <=> $b; // prints 1
+
+In the first example, the spaceship operator compares the values of $a and $b, and returns -1 because $a is less than $b.
+
+In the second example, the operator returns 0 because both operands are equal.
+
+In the third example, the operator returns 1 because $a is greater than $b.
+
+😀
+The spaceship operator can also be used in conjunction with other PHP functions like usort to simplify 
+the comparison process. For example, the following code sorts an array of integers in ascending order
+ using the spaceship operator:
+
+*/
+// $numbers = [3, 6, 1, 8, 2, 9];
+// usort($numbers, function($a, $b) {
+//     return $a <=> $b;
+// });
+// print_r($numbers); // prints [1, 2, 3, 6, 8, 9]
+
+/* another way */
+// $numbers = [3, 6, 1, 8, 2, 9];
+// usort($numbers, fn($a, $b)=> $a <=> $b);
+// print_r($numbers); // prints [1, 2, 3, 6, 8, 9]
+
+/*  
+In this example, usort uses an anonymous function that compares two values using the spaceship operator. 
+The function returns
+-1 if the first argument is less than the second, 
+0 if they are equal, and 
+1 if the first argument is greater than the second. 
+usort sorts the array in ascending order, and 
+print_r is used to print the sorted array. */
+
 ?>
