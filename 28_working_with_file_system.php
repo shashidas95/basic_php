@@ -268,6 +268,72 @@ printf($format, date('r'), get_owner($file));
 //copy('shashi.txt', 's.txt');
 /*  */
 // rename('s.txt', 'sasi.txt');
-/*  */
+
+
+/* 😀 dirname()  */
+
+/*
+
+dirname() is a built-in function in PHP that returns the directory portion of a given path. 
+It takes a single parameter, which is the path that you want to extract the directory name from,
+and returns the parent directory's path.
+
+Here's an example of how to use dirname():
+ */
+
+// $path = '/var/www/myproject/index.php';
+// $directory = dirname($path);
+// echo $directory; // Output: /var/www/myproject
+
+/* In this example, the $path variable contains the full path to a file (index.php). 
+We pass this variable to dirname(), which extracts the directory portion of the path 
+(/var/www/myproject) and assigns it to the $directory variable. Finally, 
+we use echo to output the directory path.
+
+dirname() is useful for when you need to extract the directory portion of a path, 
+especially when working with file paths. It can be used to navigate to parent directories 
+or to construct new file paths based on existing ones.
+ */
+/* scandir */
+/* scandir() is a built-in function in PHP that is used to retrieve a list of all files and directories within a specified directory. 
+It takes one required parameter, which is the path of the directory that you want to scan.
+
+Here's an example of how to use scandir() to list all files and directories within a directory:
+
+
+$dir = '/var/www/myproject/';
+$files = scandir($dir);
+
+foreach ($files as $file) {
+    echo $file . "\n";
+} */
+
+/* another real example */
+//  $root = dirname(__DIR__).DIRECTORY_SEPARATOR;
+//  echo $root;
+
+//  $path =dirname(__DIR__);
+//  echo $path ."\n";
+//  //print_r(scandir($path)) ;
+//  $files =scandir($path);
+//  foreach ($files as $file ) {
+//     if (is_dir($file)) {
+//         continue;
+//     }else{
+//         echo $file ."\n";
+//         return $file;
+//     }
+    
+ //}
+
+//  $files =[];
+//  $files[]='shashi.txt';
+//  $files[]='shash.txt';
+//  $files[]='shas.txt';
+//  $files[]='sha.txt';
+//  $files[]='sh.txt';
+//  $files[]='s.txt';
+// print_r($files);
+
 
 ?>
